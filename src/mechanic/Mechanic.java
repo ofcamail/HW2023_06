@@ -65,4 +65,17 @@ public class Mechanic {
                 "Компания: " + company + '\'' +
                 "Тип автомобилей: " + carTypes;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Mechanic mechanic = (Mechanic) o;
+        return Objects.equals(fullName, mechanic.fullName) && Objects.equals(company, mechanic.company) && Objects.equals(carTypes, mechanic.carTypes);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(fullName, company, carTypes);
+    }
 }
