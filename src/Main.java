@@ -48,5 +48,10 @@ public class Main {
 //        opel.printDriverAndMechanics();
         Map<Transport,Mechanic> mechanicHashMap = new HashMap<>();
         mechanicHashMap.put(opel, mechanic1);
+        Set <Driver> driverSet = new HashSet<>(driverList);
+        Iterator <Driver> driverIterator = driverSet.iterator();
+        while (driverIterator.hasNext()){
+            System.out.println(driverIterator.next());
+        }
     }
 }
